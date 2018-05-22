@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>  <!-- para esconder o botao : hideBackButton = "true" -->
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>INÍCIO</ion-title>
+</ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <img src="../assets/imgs/logo_icon.png"> -->
+  <br><br><br><br> <!-- AJEITAR ISTO -->
+  <button class="btn-e" ion-button color="primary" (click)='emergencia();'>E</button>
+  <button class="btn-s" ion-button color="secondary" (click)='servicos();'>S</button>
+  <button class="btn-o" ion-button color="danger" (click)='eouv();'>O</button>
+  <button class="btn-d" ion-button color="dark" (click)='duvida();'>D</button>
+
+</ion-content>
