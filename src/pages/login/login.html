@@ -38,7 +38,7 @@
     <ion-card-content>
         <ion-item>
           <ion-label floating>E-mail</ion-label>
-          <ion-input type="text" pattern="^[a-zA-Z0-9_.+-]+@[ufc]+.[com]+$" [(ngModel)]="user.email"></ion-input>
+          <ion-input type="text" [(ngModel)]="user.email"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Senha</ion-label>
@@ -46,8 +46,10 @@
         </ion-item>
     </ion-card-content>
     <ion-row>
-      <button id="entrar" ion-button color='danger' (click)="login(user)">ENTRAR</button>
-      <button id="cadastro" ion-button color='light'(click)="cadastrar()">CADASTRO</button>
+      <button id="entrar" ion-button color='primary' (click)="home()">ENTRAR</button>
+      <button id="cadastro" ion-button outline (click)="cadastrar()">CADASTRO</button>
     </ion-row>
   </ion-card>
 </ion-content>
+
+<!-- DEPOIS COLOCAR NO BOTAO ENTRAR ==== (click)="login(user)" ===== -->

@@ -12,6 +12,7 @@ import { EmergenciaPage } from '../pages/emergencia/emergencia';
 import { ServicosPage } from '../pages/servicos/servicos';
 import { EouvPage } from '../pages/eouv/eouv';
 import { DuvidaPage } from '../pages/duvida/duvida';
+import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
 
 /*** para o BD ***/
 import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
@@ -41,15 +42,16 @@ export const firebaseConfig:FirebaseAppConfig = {
     EmergenciaPage,
     ServicosPage,
     EouvPage,
-    DuvidaPage
+    DuvidaPage,
+    PerfilUsuarioPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule 
-  ],     
+    AngularFireDatabaseModule
+  ],
 
   bootstrap: [IonicApp],
   entryComponents: [
@@ -61,7 +63,8 @@ export const firebaseConfig:FirebaseAppConfig = {
     EmergenciaPage,
     ServicosPage,
     EouvPage,
-    DuvidaPage
+    DuvidaPage,
+    PerfilUsuarioPage
   ],
   providers: [
     StatusBar,

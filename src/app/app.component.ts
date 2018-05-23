@@ -16,7 +16,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage = LoginPage; 
+  rootPage = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -30,8 +30,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: LoginPage },
-      { title: 'List', component: ListPage }
+      { title: 'Login', component: LoginPage },
+      //{ title: 'List', component: ListPage },
+      { title: 'Configurações'},
+      { title: 'Sobre'}
     ];
 
   }
@@ -48,6 +50,6 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);  
+    this.nav.setRoot(page.component);
   }
 }

@@ -1,4 +1,4 @@
-page-inicio {
+page-home {
   ion-content {
     text-align: center;
   }
@@ -32,5 +32,12 @@ page-inicio {
     position: absolute;
     top: 50%;
     left: 50%;
+  }
+
+  #ligacao{
+    padding-top:0px;
+    margin-top: 85%;
+    width: 120px;
+    height: 140px;
   }
 }
