@@ -13,23 +13,22 @@ import { ServicosPage } from '../pages/servicos/servicos';
 import { EouvPage } from '../pages/eouv/eouv';
 import { DuvidaPage } from '../pages/duvida/duvida';
 
-//para o BD
-/*import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
+/*** para o BD ***/
+import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
 import { AngularFireAuthModule } from "angularfire2/auth";
-import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';*/
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-/*const firebaseConfig:FirebaseAppConfig = {
-  apiKey: "AIzaSyBk7vT86qZb-MEXIo1P6AeNSGhy7XxSXLA",
-  authDomain: "connect-fdc01.firebaseapp.com",
-  databaseURL: "https://connect-fdc01.firebaseio.com",
-  projectId: "connect-fdc01",
-  storageBucket: "connect-fdc01.appspot.com",
-  messagingSenderId: "838421080408"
-
-} */
+export const firebaseConfig:FirebaseAppConfig = {
+    apiKey: "AIzaSyBk7vT86qZb-MEXIo1P6AeNSGhy7XxSXLA",
+    authDomain: "connect-fdc01.firebaseapp.com",
+    databaseURL: "https://connect-fdc01.firebaseio.com",
+    projectId: "connect-fdc01",
+    storageBucket: "connect-fdc01.appspot.com",
+    messagingSenderId: "838421080408"
+};
 
 //inserir todas as paginas aqui
 @NgModule({
@@ -46,16 +45,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
-
-  ],
-
-  /*  AngularFireModule.initializeApp(firebaseConfig),
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule   */
-
-/****** DEPOIS COLOCO ESSE CODIGO ACIMA DENTRO DE IMPORTS *****/
-
+    AngularFireDatabaseModule 
+  ],     
 
   bootstrap: [IonicApp],
   entryComponents: [

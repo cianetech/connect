@@ -1,7 +1,5 @@
 
-
-
-<ion-content padding>
+<!-- <ion-content padding>
   <img src="../assets/imgs/logo_icon.png">
   <h5>Login: </h5>
   <input type="text" name="email" placeholder="Matrícula">
@@ -14,4 +12,42 @@
  <button ion-button color="primary" outline (click)='cadastro();'>FAZER CADASTRO</button>
 
 
+</ion-content>  -->
+
+
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content scrollbar-y="false">
+
+
+  <ion-card>
+    <ion-row>
+      <div id='topo'>Por favor, digite seu e-mail da UFC e senha</div>
+    </ion-row>
+    <ion-row>
+      <ion-img src="assets/imgs/logo-app.png" alt="Logo" class="logo"></ion-img>
+    </ion-row>
+
+    <ion-card-content>
+        <ion-item>
+          <ion-label floating>E-mail</ion-label>
+          <ion-input type="text" pattern="^[a-zA-Z0-9_.+-]+@[ufc]+.[com]+$" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+    </ion-card-content>
+    <ion-row>
+      <button id="entrar" ion-button color='danger' (click)="login(user)">ENTRAR</button>
+      <button id="cadastro" ion-button color='light'(click)="cadastrar()">CADASTRO</button>
+    </ion-row>
+  </ion-card>
 </ion-content>

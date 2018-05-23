@@ -1,12 +1,22 @@
-page-hello-ionic {
+page-login {
 
   p {
     color: blue;
   }
-  ion-content {
-  	text-align: center;
-  }
+
+  #topo{
+      width:100%;
+      height: 50px;
+      text-align: center;
+    }
+
+  ion-card ion-row{
+      padding: 5px;
+    }
+  #scroll-bar-indicator
+    {
+  	   display: none;
+    }
 
 
-  
 }
