@@ -8,9 +8,9 @@
 </ion-header>
 
 
-<ion-content padding>
-  <!-- <img src="../assets/imgs/logo_icon.png"> -->
-  <br><br><br><br> <!-- AJEITAR ISTO -->
+<!-- <ion-content padding>
+  <!-- <img src="../assets/imgs/logo_icon.png">
+  <br><br><br><br> <!-- AJEITAR ISTO
   <button class="btn-e" ion-button color="primary" (click)='emergencia();'>E</button>
   <button class="btn-s" ion-button color="secondary" (click)='servicos();'>S</button>
   <button class="btn-o" ion-button color="danger" (click)='eouv();'>O</button>
@@ -19,5 +19,33 @@
 
   <a href="tel:+55-85-3366-7631"><input id="ligacao" type="image" src="assets/imgs/botao-alarme.png"/></a>
 
+
+</ion-content>   ------>
+
+<ion-content>
+  <ion-card >
+    <ion-row>
+      <ion-img src="assets/imgs/logo.png" alt="Logo" class="logo"></ion-img>
+    </ion-row>
+  </ion-card>
+
+    <ion-card-content>
+      <button ion-item icon-left (click)='call()'>
+        <ion-icon name="heart"> Emergência</ion-icon>
+      </button>
+
+      <button ion-item (click)='servicos()'>
+        Sistema de Infraestrutura
+      </button>
+
+      <button ion-item (click)='eouv()'>
+        Ouvidoria
+      </button>
+
+      <button ion-item (click)='duvida()'>
+        Informações Úteis
+      </button>
+
+    </ion-card-content>
 
 </ion-content>

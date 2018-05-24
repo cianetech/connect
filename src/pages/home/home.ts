@@ -2,6 +2,7 @@
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
 import { EmergenciaPage } from '../emergencia/emergencia';
 import { ServicosPage } from '../servicos/servicos';
 import { EouvPage } from '../eouv/eouv';
@@ -14,7 +15,7 @@ import { DuvidaPage } from '../duvida/duvida';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private callNumber: CallNumber, public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
@@ -34,6 +35,12 @@ export class HomePage {
   duvida() {
     this.navCtrl.push(DuvidaPage);
   }
+
+  call() {
+  this.callNumber.callNumber("996860501", true)
+  .then(res => console.log('Launched dialer!', res))
+  .catch(err => console.log('Error launching dialer', err));
+}
 
 
 }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
 import { MyApp } from './app.component';
 
 //importa as paginas (telas) usadas no app
@@ -69,7 +70,8 @@ export const firebaseConfig:FirebaseAppConfig = {
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CallNumber
   ]
 })
 export class AppModule {}
