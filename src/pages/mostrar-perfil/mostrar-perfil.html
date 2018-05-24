@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mostrar Perfil Usuário</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>Nome de usuário: {{(perfilData | async)?.usuario}}</p>
+  <p>Primeiro nome: {{(perfilData | async)?.primeironome}}</p>
+  <p>Sobrenome: {{(perfilData | async)?.sobrenome}}</p>
+  <p>Curso/cargo: {{(perfilData | async)?.cursooucargo}}</p>
+
+  <button id="home" color="danger" ion-button (click)="irHome()">Início</button>
+
+</ion-content>

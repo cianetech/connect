@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { MyApp } from './app.component';
 
+
 //importa as paginas (telas) usadas no app
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -17,6 +18,7 @@ import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
 import { AcessibPage } from '../pages/acessib/acessib';
 import { AnimaisPage } from '../pages/animais/animais';
 import { EnergiaPage } from '../pages/energia/energia';
+import { MostrarPerfilPage } from '../pages/mostrar-perfil/mostrar-perfil';
 
 /*** para o BD ***/
 import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
@@ -50,7 +52,9 @@ export const firebaseConfig:FirebaseAppConfig = {
     PerfilUsuarioPage,
     AcessibPage,
     AnimaisPage,
-    EnergiaPage
+    EnergiaPage,
+    MostrarPerfilPage
+
   ],
   imports: [
     BrowserModule,
@@ -74,13 +78,14 @@ export const firebaseConfig:FirebaseAppConfig = {
     PerfilUsuarioPage,
     AcessibPage,
     AnimaisPage,
-    EnergiaPage
+    EnergiaPage,
+    MostrarPerfilPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CallNumber
+    CallNumber,
   ]
 })
 export class AppModule {}
