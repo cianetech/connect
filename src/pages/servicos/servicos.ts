@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AcessibPage } from '../acessib/acessib';
+import { AnimaisPage } from '../animais/animais';
+import { EnergiaPage } from '../energia/energia';
+
 
 @IonicPage()
 @Component({
@@ -7,10 +11,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'servicos.html',
 })
 export class ServicosPage {
-  //icons: string[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-
 
   }
 
@@ -18,23 +20,25 @@ export class ServicosPage {
     console.log('ionViewDidLoad ServicosPage');
   }
 
-  items = ['Acessibilidade', 'Abandono de Animais',
-  'Problemas Energia Elétrica', 'Ônibus', 'Outros'];
-
-  icons = ['flask', 'wifi', 'beer', 'football', 'basketball'];
-
-
-
-  itemTapped(event, item) {
-    // That's right, we're pushing to ourselves!
-    this.navCtrl.push(HomePage, {
-      item: item
-    });
+  acessib() {
+  	this.navCtrl.push(AcessibPage);
   }
 
-  itemShow(icon) {
-    this.icons.push({icon:icon
-    });
+  animais() {
+    this.navCtrl.push(AnimaisPage);
   }
+
+  energia() {
+
+  }
+
+  onibus() {
+
+  }
+
+  outros() {
+
+  }
+ 
 
 }

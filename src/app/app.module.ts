@@ -14,6 +14,9 @@ import { ServicosPage } from '../pages/servicos/servicos';
 import { EouvPage } from '../pages/eouv/eouv';
 import { DuvidaPage } from '../pages/duvida/duvida';
 import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
+import { AcessibPage } from '../pages/acessib/acessib';
+import { AnimaisPage } from '../pages/animais/animais';
+import { EnergiaPage } from '../pages/energia/energia';
 
 /*** para o BD ***/
 import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
@@ -44,7 +47,10 @@ export const firebaseConfig:FirebaseAppConfig = {
     ServicosPage,
     EouvPage,
     DuvidaPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    AcessibPage,
+    AnimaisPage,
+    EnergiaPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +71,10 @@ export const firebaseConfig:FirebaseAppConfig = {
     ServicosPage,
     EouvPage,
     DuvidaPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    AcessibPage,
+    AnimaisPage,
+    EnergiaPage
   ],
   providers: [
     StatusBar,

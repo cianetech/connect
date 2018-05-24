@@ -9,10 +9,26 @@
 
 
 <ion-content>
-  <ion-list>
-      <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-        <ion-icon [name]="item.icon" item-start></ion-icon>
-        {{ item }}
+  <ion-card-content>
+      <!-- <button ion-item (click)='acessib()'>
+       	Acessibilidade
+      </button> -->
+
+      <button ion-item (click)="animais()">
+        Abandono de Animais
       </button>
-  </ion-list>
+
+      <button ion-item>
+        Problemas com Energia Elétrica
+      </button>
+
+      <button ion-item>
+        Ônibus
+      </button>
+
+      <button ion-item>
+        Outros
+      </button>      
+    </ion-card-content>
+
 </ion-content>

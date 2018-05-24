@@ -46,16 +46,31 @@ export class LoginPage {
 
    async login(user: User){
 
-        const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
-        if(result){
-          //this.storage.set('talogado', 'logado');
-          this.navCtrl.push(HomePage);
-        }  if(!result) {
-            let toast = this.toastCtrl.create({
-            message: `Usuário não encontrado, tente novamente`,
-            duration: 3000
+       try {     
+        const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password); 
+        if(result) {
+          this.navCtrl.push(HomePage);          
+          let toast = this.toastCtrl.create({
+            message: 'Bem-vindo ' + user.email,
+            duration: 5000
           });
-            toast.present();
+          toast.present();
+        }
+
+      }  catch (e) {
+            
+            if (!this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)) { 
+              let toast = this.toastCtrl.create({
+              message: 'Usuário não encontrado, tente novamente',
+              duration: 5000});
+              toast.present();
+           }
+           console.error(e);
+      }   /*** esse catch não está pegando ***/
+         
+        
+          //this.storage.set('talogado', 'logado');
+        
       /** let alert = this.alertCtrl.create({
       title: 'New Friend!',
       subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
@@ -64,5 +79,5 @@ export class LoginPage {
     alert.present(); ***/
         }
 
-      }
 }
+
