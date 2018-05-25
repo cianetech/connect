@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Sistema de Infraestrutura</ion-title>
+    <ion-title>Relatar um problema</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,7 +12,7 @@
   <ion-card-content>
       <!-- <button ion-item (click)='acessib()'>
        	Acessibilidade
-      </button> -->
+      </button>
 
       <button ion-item (click)="animais()">
         Abandono de Animais
@@ -28,7 +28,32 @@
 
       <button ion-item>
         Outros
-      </button>      
+      </button>-->
+
+      <ion-item id="categoria">
+        <ion-select [(ngModel)]="categoria" placeholder="Categoria" okText="Aceitar" cancelText="Cancelar">
+          <!--<ion-option value="acessibilidade">Acessibilidade</ion-option>-->
+          <ion-option value="abandono">Abandono de animais</ion-option>
+          <ion-option value="energia">Problemas com energia elétrica</ion-option>
+          <ion-option value="onibus">Ônibus</ion-option>
+          <ion-option value="outros">Outros</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item id="localizacao">
+        <ion-select [(ngModel)]="local" placeholder="Localização" okText="Aceitar" cancelText="Cancelar">
+          <ion-option value="pici">Campus do Pici</ion-option>
+          <ion-option value="benfica">Campus do Benfica</ion-option>
+          <ion-option value="porangabussu">Campus do Porangabussu</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item id="descricao">
+        <ion-textarea rows="4" placeholder="Descrição da ocorrência"></ion-textarea>
+      </ion-item>
+
+      <button id="enviar" ion-button color='primary' (click)="enviar()">ENVIAR</button>
+
     </ion-card-content>
 
 </ion-content>

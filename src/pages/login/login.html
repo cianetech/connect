@@ -15,24 +15,14 @@
 </ion-content>  -->
 
 
-<ion-header>
-
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-
-</ion-header>
-
+<ion-header></ion-header>
 
 <ion-content scrollbar-y="false">
-
-
-  <ion-card>
     <ion-row>
-      <div id='topo'>Por favor, digite o seu e-mail e senha</div>
+      <div id='topo'></div>
     </ion-row>
     <ion-row>
-      <ion-img src="assets/imgs/logo-app.png" alt="Logo" class="logo"></ion-img>
+      <ion-img src="assets/imgs/logo-app.png" alt="Logo" id="logo-app"></ion-img>
     </ion-row>
 
     <ion-card-content>
@@ -44,12 +34,17 @@
           <ion-label floating>Senha</ion-label>
           <ion-input type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
+
+        <ion-item no-lines>
+          <ion-label margin-left>Lembre-se de mim</ion-label>
+          <ion-checkbox id="lembrar" (ionChange)="lembrarUsuario()"></ion-checkbox>
+        </ion-item>
+        <!--Checkbox "pronta", acho que basta implementar a função lembrarUsuario()-->
     </ion-card-content>
     <ion-row>
       <button id="entrar" ion-button color='primary' (click)="login(user)">LOGIN</button>
       <button id="cadastro" ion-button outline (click)="cadastrar()">CADASTRO</button>
     </ion-row>
-  </ion-card>
 </ion-content>
 
 <!-- DEPOIS COLOCAR NO BOTAO ENTRAR ==== (click)="login(user)" ===== -->
