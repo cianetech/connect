@@ -40,26 +40,30 @@ export class LoginPage {
     this.navCtrl.push(CadastroPage);
   }
 
+  createProfile() {
+    this.navCtrl.push(PerfilUsuarioPage);
+  }
+
 
 
 
 
    async login(user: User){
 
-       try {     
-        const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password); 
+       try {
+        const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
         if(result) {
-          this.navCtrl.push(HomePage);          
+          this.navCtrl.push(HomePage);
           let toast = this.toastCtrl.create({
-            message: 'Bem-vindo ' + user.email,
+            message: 'Bem-vindo(a) ' + user.email,
             duration: 5000
           });
           toast.present();
         }
 
       }  catch (e) {
-            
-            if (!this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)) { 
+
+            if (!this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)) {
               let toast = this.toastCtrl.create({
               message: 'Usuário não encontrado, tente novamente',
               duration: 5000});
@@ -67,10 +71,10 @@ export class LoginPage {
            }
            console.error(e);
       }   /*** esse catch não está pegando ***/
-         
-        
+
+
           //this.storage.set('talogado', 'logado');
-        
+
       /** let alert = this.alertCtrl.create({
       title: 'New Friend!',
       subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
@@ -80,4 +84,3 @@ export class LoginPage {
         }
 
 }
-

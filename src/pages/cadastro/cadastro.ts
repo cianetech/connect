@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { PerfilUsuarioPage } from '../perfil-usuario/perfil-usuario';
-import { MostrarPerfilPage } from '../mostrar-perfil/mostrar-perfil'
+import { MostrarPerfilPage } from '../mostrar-perfil/mostrar-perfil';
+import { LoginPage } from '../login/login';
 
 
 @IonicPage()
@@ -35,7 +36,7 @@ async cadastrar(user: User){
         });
         toast.present();
 
-        this.navCtrl.push(PerfilUsuarioPage);
+        this.navCtrl.push(LoginPage);
       }
     }catch(e){
       console.error(e);

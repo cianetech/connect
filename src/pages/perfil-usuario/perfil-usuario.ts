@@ -22,12 +22,21 @@ export class PerfilUsuarioPage {
     console.log('ionViewDidLoad PerfilUsuarioPage');
   }
 
-  criarPerfil(){
+  /**** criarPerfil(){
 
     //criar registro no bd
     this.afAuth.authState.take(1).subscribe(auth =>{
       this.afDatabase.object(`perfil/${auth.uid}`).set(this.perfil)
       .then(() => this.navCtrl.setRoot('MostrarPerfilPage'));
+    })
+  }   ****/
+
+
+  criarPerfil(){
+
+    this.afAuth.authState.take(1).subscribe(auth =>{
+      this.afDatabase.list(`perfil/${auth.uid}`).set(this.perfil)
+      .then(() => this.navCtrl.push('HomePage'));
     })
   }
 

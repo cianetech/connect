@@ -1,12 +1,8 @@
 <ion-header>
 
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-
-    <ion-title>Editar Perfil de Usuário</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-title>Crie o seu perfil</ion-title>
+  </ion-toolbar>
 
 </ion-header>
 
@@ -25,11 +21,8 @@
     <ion-label floating>Sobrenome</ion-label>
     <ion-input [(ngModel)]="perfil.sobrenome"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label floating>Curso ou cargo na ufc</ion-label>
-    <ion-input [(ngModel)]="perfil.cursooucargo"></ion-input>
-  </ion-item>
 
-  <button ion-button color="danger" block (click)="criarPerfil()">AVANÇAR</button>
+
+  <button ion-button clear block color="primary" (click)="criarPerfil()">Criar Perfil</button>
 
 </ion-content>

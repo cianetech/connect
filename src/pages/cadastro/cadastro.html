@@ -9,7 +9,7 @@
 
 
 <ion-content padding>
-  <ion-row id="instrucoes">Utilize seu e-mail institucional e coloque uma senha de sua escolha</ion-row>
+  <ion-row id="instrucoes">Digite o seu e-mail e coloque uma senha de sua escolha</ion-row>
   <ion-item>
     <ion-label floating>Email</ion-label>
     <ion-input type="text" [(ngModel)]="user.email"></ion-input>
@@ -19,7 +19,7 @@
     <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
   <ion-row>
-    <button ion-button color="primary"  (click)="cadastro()" id="botao">Cadastrar</button>
+    <button ion-button color="primary"  (click)="cadastrar(user)" id="botao">Cadastrar</button>
   </ion-row>
 </ion-content>
 
