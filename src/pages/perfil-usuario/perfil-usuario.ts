@@ -35,7 +35,7 @@ export class PerfilUsuarioPage {
   criarPerfil(){
 
     this.afAuth.authState.take(1).subscribe(auth =>{
-      this.afDatabase.list(`perfil/${auth.uid}`).set(this.perfil)
+      this.afDatabase.object(`perfil/${auth.uid}`).set(this.perfil)
       .then(() => this.navCtrl.push('HomePage'));
     })
   }

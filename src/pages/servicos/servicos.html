@@ -31,17 +31,17 @@
       </button>-->
 
       <ion-item id="categoria">
-        <ion-select [(ngModel)]="categoria" placeholder="Categoria" okText="Aceitar" cancelText="Cancelar">
+        <ion-select [(ngModel)]="categoria" placeholder="Categoria" interface="popover" class="wide-select">
           <!--<ion-option value="acessibilidade">Acessibilidade</ion-option>-->
           <ion-option value="abandono">Abandono de animais</ion-option>
-          <ion-option value="energia">Problemas com energia elétrica</ion-option>
+          <ion-option value="energia">Problemas com energia</ion-option>
           <ion-option value="onibus">Ônibus</ion-option>
           <ion-option value="outros">Outros</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item id="localizacao">
-        <ion-select [(ngModel)]="local" placeholder="Localização" okText="Aceitar" cancelText="Cancelar">
+        <ion-select [(ngModel)]="local" placeholder="Localização" interface="popover" class="wide-select">
           <ion-option value="pici">Campus do Pici</ion-option>
           <ion-option value="benfica">Campus do Benfica</ion-option>
           <ion-option value="porangabussu">Campus do Porangabussu</ion-option>
