@@ -28,22 +28,29 @@
     </ion-row>
 
     <ion-card-content>
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
       <button ion-item icon-left (click)='call()'>
-        Emergência
+        <ion-icon class="fa fa-ambulance" name="emergencia"></ion-icon>
+        &nbsp;Emergência
       </button>
 
-      <button ion-item (click)='servicos()'>
-        Sistema de Infraestrutura
+      <button ion-item icon-left (click)='servicos()'>
+        <ion-icon class="fa fa-question-circle" name="relato"></ion-icon>
+        &nbsp;Relatar um Problema
       </button>
 
-      <button ion-item (click)='eouv()'>
-        Ouvidoria
+      <button ion-item icon-left (click)='eouv()'>
+        <ion-icon class="fa fa-comments" name="ouvidoria"></ion-icon>
+        &nbsp;Ouvidoria
       </button>
 
-      <button ion-item (click)='duvida()'>
-        Informações Úteis
+      <button ion-item icon-left (click)='duvida()'>
+        <ion-icon class="fa fa-info-circle" name="informacoes"></ion-icon>
+        &nbsp;Informações Úteis
       </button>
-
+      
     </ion-card-content>
 
 </ion-content>

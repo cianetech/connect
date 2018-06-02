@@ -10,32 +10,14 @@
 
 <ion-content>
   <ion-card-content>
-      <!-- <button ion-item (click)='acessib()'>
-       	Acessibilidade
-      </button>
-
-      <button ion-item (click)="animais()">
-        Abandono de Animais
-      </button>
-
-      <button ion-item>
-        Problemas com Energia Elétrica
-      </button>
-
-      <button ion-item>
-        Ônibus
-      </button>
-
-      <button ion-item>
-        Outros
-      </button>-->
 
       <ion-item id="categoria">
         <ion-select [(ngModel)]="categoria" placeholder="Categoria" interface="popover" class="wide-select">
           <!--<ion-option value="acessibilidade">Acessibilidade</ion-option>-->
-          <ion-option value="abandono">Abandono de animais</ion-option>
+          <ion-option value="animais">Animais</ion-option>
           <ion-option value="energia">Problemas com energia</ion-option>
           <ion-option value="onibus">Ônibus</ion-option>
+          <ion-option value="RU">Restaurante Universitário</ion-option>
           <ion-option value="outros">Outros</ion-option>
         </ion-select>
       </ion-item>

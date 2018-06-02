@@ -1,9 +1,11 @@
 page-home {
+
   ion-content {
     text-align: center;
   }
   #logo-start{
     margin: 30px auto 10px;
+    width: 75%;
   }
   .btn-e {
     font-size: 40px;
@@ -43,4 +45,17 @@ page-home {
     width: 120px;
     height: 140px;
   }
+  ion-icon.fa {
+    font-size: 1.2em;
+    width: 2.6em;
+    text-align: center;
+    line-height: 1.6em;
+    background: #E70060;
+    color: #fff;
+    display: inline-block;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
+  }
+
 }
