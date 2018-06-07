@@ -10,9 +10,8 @@
 
 <ion-content>
   <ion-card-content>
-
       <ion-item id="categoria">
-        <ion-select [(ngModel)]="categoria" placeholder="Categoria" interface="popover" class="wide-select">
+        <ion-select [(ngModel)]="categoria" name="categoria" placeholder="Categoria" interface="popover" class="wide-select">
           <!--<ion-option value="acessibilidade">Acessibilidade</ion-option>-->
           <ion-option value="animais">Animais</ion-option>
           <ion-option value="energia">Problemas com energia</ion-option>
@@ -23,19 +22,31 @@
       </ion-item>
 
       <ion-item id="localizacao">
-        <ion-select [(ngModel)]="local" placeholder="Localização" interface="popover" class="wide-select">
+        <ion-select [(ngModel)]="local" name="local" placeholder="Localização" interface="popover" class="wide-select">
           <ion-option value="pici">Campus do Pici</ion-option>
           <ion-option value="benfica">Campus do Benfica</ion-option>
           <ion-option value="porangabussu">Campus do Porangabussu</ion-option>
         </ion-select>
       </ion-item>
 
-      <ion-item id="descricao">
+     <!-- <ion-item id="descricao">
         <ion-textarea rows="4" placeholder="Descrição da ocorrência"></ion-textarea>
-      </ion-item>
+      </ion-item> -->
 
-      <button id="enviar" ion-button color='primary' (click)="enviar()">ENVIAR</button>
+      <form (ngSubmit)="logForm()" padding>
+         <!-- <ion-item>
+            <ion-label>Todo</ion-label>
+            <ion-input type="text" [(ngModel)]="todo.title" name="title"></ion-input>
+          </ion-item>  -->
+          <ion-item>
+            <!-- <ion-label>Descrição</ion-label>-->
+            <ion-textarea [(ngModel)]="todo.description" name="description" placeholder="Descrição"></ion-textarea>
+          </ion-item>
+          <button ion-button type="submit" block (click)="sendEmail()">ENVIAR</button>
+        </form>
 
-    </ion-card-content>
+
+      <!-- <button id="enviar" ion-button color='primary' (click)="enviar()">ENVIAR</button> -->
+  </ion-card-content>
 
 </ion-content>

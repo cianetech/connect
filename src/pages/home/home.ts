@@ -6,7 +6,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { EmergenciaPage } from '../emergencia/emergencia';
 import { ServicosPage } from '../servicos/servicos';
 import { EouvPage } from '../eouv/eouv';
-import { DuvidaPage } from '../duvida/duvida';
+import { SobrePage } from '../sobre/sobre';
 
 
 @Component({
@@ -32,8 +32,8 @@ export class HomePage {
   eouv() {
     this.navCtrl.push(EouvPage);
   }
-  duvida() {
-    this.navCtrl.push(DuvidaPage);
+  sobre() {
+    this.navCtrl.push(SobrePage);
   }
 
   call() {

@@ -63,13 +63,20 @@ export class LoginPage {
 
       }  catch (e) {
 
-            if (!this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)) {
+            /*if (!this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password)) {
               let toast = this.toastCtrl.create({
               message: 'Usuário não encontrado, tente novamente',
               duration: 5000});
               toast.present();
-           }
+           }  */
            console.error(e);
+
+           let alert = this.alertCtrl.create({
+             subTitle: 'Entre com usuário e senha válidos',
+             buttons: ['OK']
+           });
+           alert.present();
+
       }   /*** esse catch não está pegando ***/
 
 

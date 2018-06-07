@@ -3,6 +3,11 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { MyApp } from './app.component';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { EmailComposer } from '@ionic-native/email-composer';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 
 //importa as paginas (telas) usadas no app
@@ -13,20 +18,17 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { EmergenciaPage } from '../pages/emergencia/emergencia';
 import { ServicosPage } from '../pages/servicos/servicos';
 import { EouvPage } from '../pages/eouv/eouv';
-import { DuvidaPage } from '../pages/duvida/duvida';
 import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
-import { AcessibPage } from '../pages/acessib/acessib';
-import { AnimaisPage } from '../pages/animais/animais';
-import { EnergiaPage } from '../pages/energia/energia';
 import { MostrarPerfilPage } from '../pages/mostrar-perfil/mostrar-perfil';
+import { SobrePage } from '../pages/sobre/sobre';
+
 
 /*** para o BD ***/
 import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
 import { AngularFireAuthModule } from "angularfire2/auth";
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 export const firebaseConfig:FirebaseAppConfig = {
     apiKey: "AIzaSyBk7vT86qZb-MEXIo1P6AeNSGhy7XxSXLA",
@@ -48,12 +50,9 @@ export const firebaseConfig:FirebaseAppConfig = {
     EmergenciaPage,
     ServicosPage,
     EouvPage,
-    DuvidaPage,
     PerfilUsuarioPage,
-    AcessibPage,
-    AnimaisPage,
-    EnergiaPage,
-    MostrarPerfilPage
+    MostrarPerfilPage,
+    SobrePage
 
   ],
   imports: [
@@ -74,18 +73,17 @@ export const firebaseConfig:FirebaseAppConfig = {
     EmergenciaPage,
     ServicosPage,
     EouvPage,
-    DuvidaPage,
     PerfilUsuarioPage,
-    AcessibPage,
-    AnimaisPage,
-    EnergiaPage,
-    MostrarPerfilPage
+    MostrarPerfilPage,
+    SobrePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CallNumber,
+    InAppBrowser,
+    EmailComposer
   ]
 })
 export class AppModule {}
