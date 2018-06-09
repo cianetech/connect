@@ -10,6 +10,7 @@
 
 <ion-content>
   <ion-card-content>
+      <p style="font-size: 18px" text-center>Por favor especifique a natureza do problema, o local e uma curta descrição. Seu pedido será encaminhado assim que possível.</p>
       <ion-item id="categoria">
         <ion-select [(ngModel)]="categoria" name="categoria" placeholder="Categoria" interface="popover" class="wide-select">
           <!--<ion-option value="acessibilidade">Acessibilidade</ion-option>-->
@@ -25,7 +26,8 @@
         <ion-select [(ngModel)]="local" name="local" placeholder="Localização" interface="popover" class="wide-select">
           <ion-option value="pici">Campus do Pici</ion-option>
           <ion-option value="benfica">Campus do Benfica</ion-option>
-          <ion-option value="porangabussu">Campus do Porangabussu</ion-option>
+          <ion-option value="porangabuçu">Campus do Porangabuçu</ion-option>
+          <ion-option value="labomar">LABOMAR</ion-option>
         </ion-select>
       </ion-item>
 
@@ -40,9 +42,10 @@
           </ion-item>  -->
           <ion-item>
             <!-- <ion-label>Descrição</ion-label>-->
-            <ion-textarea [(ngModel)]="todo.description" name="description" placeholder="Descrição"></ion-textarea>
+            <ion-textarea rows="4" [(ngModel)]="todo.description" name="description" placeholder="Descrição"></ion-textarea>
           </ion-item>
-          <button ion-button type="submit" block (click)="sendEmail()">ENVIAR</button>
+          <br>
+          <button ion-button default type="submit" block (click)="sendEmail()">ENVIAR</button>
         </form>
 
 

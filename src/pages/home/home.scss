@@ -3,48 +3,12 @@ page-home {
   ion-content {
     text-align: center;
   }
+
   #logo-start{
-    margin: 30px auto 10px;
+    margin: 28px auto 0;
     width: 75%;
   }
-  .btn-e {
-    font-size: 40px;
-    border-radius: 12px;
-    padding: 32px 16px;
-    position: absolute;
-    left: 20%;
 
-  }
-  .btn-s {
-    font-size: 40px;
-    border-radius: 12px;
-    padding: 32px 16px;
-    position: absolute;
-    left: 50%;
-  }
-  .btn-o {
-    font-size: 40px;
-    border-radius: 12px;
-    padding: 32px 16px;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-  }
-  .btn-d {
-    font-size: 40px;
-    border-radius: 12px;
-    padding: 32px 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-  }
-
-  #ligacao{
-    padding-top:0px;
-    margin-top: 85%;
-    width: 120px;
-    height: 140px;
-  }
   ion-icon.fa {
     font-size: 1.2em;
     width: 2.6em;

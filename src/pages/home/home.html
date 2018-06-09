@@ -1,31 +1,18 @@
 <ion-header>
   <ion-toolbar color="primary">  <!-- para esconder o botao : hideBackButton = "true" -->
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+    <ion-title padding>CONNECT</ion-title>
+    <button ion-button right padding menuToggle (click)='sair()'>
+      Sair
     </button>
-    <ion-title>INÍCIO</ion-title>
 </ion-toolbar>
 </ion-header>
 
-
-<!-- <ion-content padding>
-   <img src="../assets/imgs/logo_icon.png">
-  <br><br><br><br> AJEITAR ISTO
-  <button class="btn-e" ion-button color="primary" (click)='emergencia();'>E</button>
-  <button class="btn-s" ion-button color="secondary" (click)='servicos();'>S</button>
-  <button class="btn-o" ion-button color="danger" (click)='eouv();'>O</button>
-  <button class="btn-d" ion-button color="dark" (click)='duvida();'>D</button>
-
-
-  <a href="tel:+55-85-3366-7631"><input id="ligacao" type="image" src="assets/imgs/botao-alarme.png"/></a>
-
-
-</ion-content>   ------>
-
 <ion-content>
+
     <ion-row>
-      <ion-img src="assets/imgs/logo-start.png" alt="Logo" id="logo-start"></ion-img>
+      <ion-img src="assets/pngs/logo.png" alt="Logo" id="logo-start"></ion-img>
     </ion-row>
+    <p style="font-size: 15px">Acesse as opções abaixo para utilizar nossos serviços</p>
 
     <ion-card-content>
 
@@ -37,8 +24,13 @@
       </button>
 
       <button ion-item icon-left (click)='servicos()'>
-        <ion-icon class="fa fa-question-circle" name="relato"></ion-icon>
+        <ion-icon class="fa fa-exclamation-circle" name="relato"></ion-icon>
         &nbsp;Relatar um Problema
+      </button>
+
+      <button ion-item icon-left (click)='elogios()'>
+        <ion-icon class="fa fa-thumbs-up" name="elogio"></ion-icon>
+        &nbsp;Fazer um elogio
       </button>
 
       <button ion-item icon-left (click)='eouv()'>
@@ -46,7 +38,7 @@
         &nbsp;Ouvidoria
       </button>
 
-      <button ion-item icon-left (click)='sobre()'>
+      <button ion-item icon-left no-lines (click)='sobre()'>
         <ion-icon class="fa fa-info-circle" name="informacoes"></ion-icon>
         &nbsp;Informações Úteis
       </button>

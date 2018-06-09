@@ -3,6 +3,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
+import { LoginPage } from '../login/login';
 import { EmergenciaPage } from '../emergencia/emergencia';
 import { ServicosPage } from '../servicos/servicos';
 import { EouvPage } from '../eouv/eouv';
@@ -23,11 +24,17 @@ export class HomePage {
     console.log('ionViewDidLoad InicioPage');
   }*/
 
+  sair() {
+    this.navCtrl.push(LoginPage);
+  }
   emergencia() {
     this.navCtrl.push(EmergenciaPage);
   }
   servicos() {
     this.navCtrl.push(ServicosPage);
+  }
+  elogios() {
+    this.navCtrl.push(ElogiosPage);
   }
   eouv() {
     this.navCtrl.push(EouvPage);
