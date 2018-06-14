@@ -10,11 +10,13 @@
 
 <ion-content>
   <ion-card-content>
-      <p>Elogios também são bem-vindos! Deixe-nos saber sobre o que lhe agrada na infraestrutura dos campi.</p>
+      <p>Nem só de reclamações e denúncias vive uma ouvidoria; elogios também são bem-vindos!<br><br>
+
+      Palavras de estímulo incentivam as pessoas a manter comportamentos agradáveis, então não se esqueça deles.</p>
 
       <form (ngSubmit)="logForm()" padding>
           <ion-item>
-            <ion-textarea rows="4" [(ngModel)]="todo.description" name="description" placeholder="Descrição"></ion-textarea>
+            <ion-textarea rows="5" [(ngModel)]="todo.description" name="elogio" placeholder="Deixe aqui seu elogio"></ion-textarea>
           </ion-item>
           <br>
           <button ion-button default type="submit" block (click)="sendEmail()">ENVIAR</button>
