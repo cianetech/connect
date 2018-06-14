@@ -17,6 +17,7 @@ import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { EmergenciaPage } from '../pages/emergencia/emergencia';
 import { ServicosPage } from '../pages/servicos/servicos';
+import { ElogiosPage } from '../pages/elogios/elogios';
 import { EouvPage } from '../pages/eouv/eouv';
 import { PerfilUsuarioPage } from '../pages/perfil-usuario/perfil-usuario';
 import { MostrarPerfilPage } from '../pages/mostrar-perfil/mostrar-perfil';
@@ -49,6 +50,7 @@ export const firebaseConfig:FirebaseAppConfig = {
     CadastroPage,
     EmergenciaPage,
     ServicosPage,
+    ElogiosPage,
     EouvPage,
     PerfilUsuarioPage,
     MostrarPerfilPage,
@@ -72,6 +74,7 @@ export const firebaseConfig:FirebaseAppConfig = {
     CadastroPage,
     EmergenciaPage,
     ServicosPage,
+    ElogiosPage,
     EouvPage,
     PerfilUsuarioPage,
     MostrarPerfilPage,

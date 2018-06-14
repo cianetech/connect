@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Relatar um problema</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card-content>
+      <p>Elogios também são bem-vindos! Deixe-nos saber sobre o que lhe agrada na infraestrutura dos campi.</p>
+
+      <form (ngSubmit)="logForm()" padding>
+          <ion-item>
+            <ion-textarea rows="4" [(ngModel)]="todo.description" name="description" placeholder="Descrição"></ion-textarea>
+          </ion-item>
+          <br>
+          <button ion-button default type="submit" block (click)="sendEmail()">ENVIAR</button>
+        </form>
+
+
+      <!-- <button id="enviar" ion-button color='primary' (click)="enviar()">ENVIAR</button> -->
+  </ion-card-content>
+
+</ion-content>

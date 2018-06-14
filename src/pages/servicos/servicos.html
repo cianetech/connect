@@ -10,7 +10,7 @@
 
 <ion-content>
   <ion-card-content>
-      <p style="font-size: 18px" text-center>Por favor especifique a natureza do problema, o local e uma curta descrição. Seu pedido será encaminhado assim que possível.</p>
+      <p>Por favor especifique a natureza do problema, o local e uma curta descrição. Seu pedido será encaminhado assim que possível.</p>
       <ion-item id="categoria">
         <ion-select [(ngModel)]="categoria" name="categoria" placeholder="Categoria" interface="popover" class="wide-select">
           <!--<ion-option value="acessibilidade">Acessibilidade</ion-option>-->
@@ -31,17 +31,8 @@
         </ion-select>
       </ion-item>
 
-     <!-- <ion-item id="descricao">
-        <ion-textarea rows="4" placeholder="Descrição da ocorrência"></ion-textarea>
-      </ion-item> -->
-
       <form (ngSubmit)="logForm()" padding>
-         <!-- <ion-item>
-            <ion-label>Todo</ion-label>
-            <ion-input type="text" [(ngModel)]="todo.title" name="title"></ion-input>
-          </ion-item>  -->
           <ion-item>
-            <!-- <ion-label>Descrição</ion-label>-->
             <ion-textarea rows="4" [(ngModel)]="todo.description" name="description" placeholder="Descrição"></ion-textarea>
           </ion-item>
           <br>

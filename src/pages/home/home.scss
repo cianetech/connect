@@ -1,12 +1,15 @@
 page-home {
 
-  ion-content {
+  p {
     text-align: center;
+    color: #777;
+    font-size: 15px;
   }
 
   #logo-start{
-    margin: 28px auto 0;
     width: 75%;
+    height: 12%;
+    margin: 28px 12.5% 0;
   }
 
   ion-icon.fa {

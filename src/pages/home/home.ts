@@ -6,6 +6,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { LoginPage } from '../login/login';
 import { EmergenciaPage } from '../emergencia/emergencia';
 import { ServicosPage } from '../servicos/servicos';
+import { ElogiosPage } from '../elogios/elogios';
 import { EouvPage } from '../eouv/eouv';
 import { SobrePage } from '../sobre/sobre';
 
