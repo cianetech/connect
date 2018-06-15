@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { EmailComposer } from '@ionic-native/email-composer';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 
 @IonicPage()
@@ -9,8 +10,14 @@ import { EmailComposer } from '@ionic-native/email-composer';
   templateUrl: 'elogios.html',
 })
 export class ElogiosPage {
+  elogios: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private emailComposer: EmailComposer) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    private db: AngularFireDatabase) {
+
+      this.elogios = db.object('elogios').valueChanges();
+
   }
 
   ionViewDidLoad() {
@@ -18,37 +25,52 @@ export class ElogiosPage {
   }
 
   todo = {
-    'title': '',
-    'description': '',
+    'mensagem': ''
   }
+  
+  
   logForm() {
-    console.log(this.todo)
+    const elogiosRef = this.db.list('elogios');
+      elogiosRef.push({
+        mensagem: this.todo.mensagem
+      });
+  
   }
 
-  sendEmail(){
-    this.emailComposer.isAvailable().then((available: boolean) =>{
-      if(available) {
-        //Now we know we can send
-      }
-      });
 
-      let email = {
-        to: 'gracianex@gmail.com',
-        // cc: 'erika@mustermann.de',
-        // bcc: ['john@doe.com', 'jane@doe.com'],
-        // attachments: [
-        //   'file://img/logo.png',
-        //   'res://icon.png',
-        //   'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
-        //   'file://README.pdf'
-        // ],
-        subject: this.todo.title, 
-        body: this.todo.description,
-        isHtml: true
-      };
 
-      // Send a text message using default options
-      this.emailComposer.open(email);
-    }
+
+
+
+
+
+
+
+
+  // sendEmail(){
+  //   this.emailComposer.isAvailable().then((available: boolean) =>{
+  //     if(available) {
+  //       //Now we know we can send
+  //     }
+  //     });
+
+  //     let email = {
+  //       to: 'gracianex@gmail.com',
+  //       // cc: 'erika@mustermann.de',
+  //       // bcc: ['john@doe.com', 'jane@doe.com'],
+  //       // attachments: [
+  //       //   'file://img/logo.png',
+  //       //   'res://icon.png',
+  //       //   'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
+  //       //   'file://README.pdf'
+  //       // ],
+  //       subject: this.todo.title, 
+  //       body: this.todo.description,
+  //       isHtml: true
+  //     };
+
+  //     // Send a text message using default options
+  //     this.emailComposer.open(email);
+  //   }
     
 }

@@ -5,7 +5,7 @@
     <ion-img src="assets/pngs/logo.png" alt="Logo" id="logo-app"></ion-img>
     
     <br>
-    <p>Digite seu e-mail e senha cadastrados</p>
+    <p id="msg">Digite seu e-mail e senha cadastrados</p>
 
     <ion-card-content>
         <ion-item>
@@ -16,14 +16,16 @@
           <ion-label floating>Senha</ion-label>
           <ion-input type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
+        
+        <p id="senha">*No mínimo 6 caracteres</p>
+      
 
-        <ion-item no-lines>
+        <!-- <ion-item no-lines>
           <ion-label margin-left>Lembre-se de mim</ion-label>
           <ion-checkbox id="lembrar" (ionChange)="lembrarUsuario()"></ion-checkbox>
-        </ion-item>
-        <!--Checkbox "pronta", acho que basta implementar a função lembrarUsuario()-->
+        </ion-item> -->
     </ion-card-content>
-    <ion-row>
+    <ion-row padding>
       <button id="entrar" ion-button color='primary' (click)="home()">LOGIN</button>
       <button id="cadastro" ion-button outline (click)="cadastrar()">CADASTRO</button>
     </ion-row>

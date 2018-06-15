@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Relatar um problema</ion-title>
+    <ion-title>Elogios</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -14,12 +14,12 @@
 
       Palavras de estímulo incentivam as pessoas a manter comportamentos agradáveis, então não se esqueça deles.</p>
 
-      <form (ngSubmit)="logForm()" padding>
+      <form padding>
           <ion-item>
-            <ion-textarea rows="5" [(ngModel)]="todo.description" name="elogio" placeholder="Deixe aqui seu elogio"></ion-textarea>
+            <ion-textarea rows="5" [(ngModel)]="todo.mensagem" name="mensagem" placeholder="Deixe aqui seu elogio"></ion-textarea>
           </ion-item>
           <br>
-          <button ion-button default type="submit" block (click)="sendEmail()">ENVIAR</button>
+          <button ion-button default type="submit" block (click)="logForm()">ENVIAR</button>
         </form>
 
 

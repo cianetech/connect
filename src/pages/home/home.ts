@@ -45,7 +45,7 @@ export class HomePage {
   }
 
   call() {
-  this.callNumber.callNumber("996860501", true)
+  this.callNumber.callNumber("192", true)
   .then(res => console.log('Launched dialer!', res))
   .catch(err => console.log('Error launching dialer', err));
 }

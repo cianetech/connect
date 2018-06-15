@@ -12,7 +12,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 //importa as paginas (telas) usadas no app
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { EmergenciaPage } from '../pages/emergencia/emergencia';
@@ -27,11 +26,13 @@ import { SobrePage } from '../pages/sobre/sobre';
 /*** para o BD ***/
 import { AngularFireModule, FirebaseAppConfig } from "angularfire2";
 import { AngularFireAuthModule } from "angularfire2/auth";
-import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+//import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 
 
 
-export const firebaseConfig:FirebaseAppConfig = {
+var config = {
     apiKey: "AIzaSyBk7vT86qZb-MEXIo1P6AeNSGhy7XxSXLA",
     authDomain: "connect-fdc01.firebaseapp.com",
     databaseURL: "https://connect-fdc01.firebaseio.com",
@@ -45,7 +46,6 @@ export const firebaseConfig:FirebaseAppConfig = {
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     CadastroPage,
     EmergenciaPage,
@@ -60,7 +60,7 @@ export const firebaseConfig:FirebaseAppConfig = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
@@ -69,7 +69,6 @@ export const firebaseConfig:FirebaseAppConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     CadastroPage,
     EmergenciaPage,
